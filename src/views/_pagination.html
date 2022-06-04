@@ -10,10 +10,11 @@
                     {{ currentPage }}
                 </span> de {{ totalPages }}
             </li>
-
-            <li class="pagination__next">
-                <a href="?page={{ currentPage + 1 }}">Siguiente ></a>
-            </li>
+            {% if currentPage < totalPages %}
+                <li class="pagination__next">
+                    <a href="?page={{ currentPage + 1 }}">Siguiente ></a>
+                </li>
+            {% endif %}
         </ul>
     </nav>
 {% endmacro %}
