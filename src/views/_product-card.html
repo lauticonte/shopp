@@ -29,6 +29,11 @@
                 </form>
             {% else %}
                 <div class="product__quantity fs-4 bold">
+                    <form action="/cart/delete" method="POST">
+                        <input type="text" class="d-none" name="productid" value="{{ product.id  }}">
+                        <button type="submit" class="btn btn-outline-danger">Quitar del carrito</button>
+                    </form>
+
                     {{ product.CartProduct.quantity }} en carrito
                 </div>
             {% endif %}
