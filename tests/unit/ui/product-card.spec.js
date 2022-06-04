@@ -81,6 +81,22 @@ describe('Tarjeta de producto', () => {
         const btn = getByText(document.body, 'Agregar a carrito');
         expect(btn).toBeVisible();
     });
+    test('Deberia tener boton para quitar del carrito', async () => {
+        const product = {
+            name: 'Placard',
+            type: 'home',
+            price: 100,
+            CartProduct: {
+                quantity: 2,
+            },
+        };
+        const html = renderProduct(product);
+        document.body.innerHTML = html;
+
+        expect(queryByText(document.body, 'Agregar a carrito')).toBeNull();
+        const btn = getByText(document.body, 'Quitar del carrito');
+        expect(btn).toBeVisible();
+    });
 
     test('Deberia mostrar la cantidad de items en carrito si el producto esta dentro de un carrito', async () => {
         const product = {
