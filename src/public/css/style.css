@@ -25,3 +25,11 @@ body {
     list-style: none;
     display: flex;
 }
+
+.footer{
+    position: absolute;
+    left: 0;
+    right: 0;
+    width: 100%;
+}
+
