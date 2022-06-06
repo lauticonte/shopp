@@ -53,4 +53,9 @@ describe('Home Test', () => {
         cy.visit('/?page=1');
         cy.get('.pagination__prev').should('not.exist');
     });
+
+    it('Deberia ocultarse boton siguiente en la ultima pagina', () => {
+        cy.visit('/?page=2');
+        cy.get('.pagination__next').should('not.exist');
+    });
 });
