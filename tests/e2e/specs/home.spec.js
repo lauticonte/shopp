@@ -49,4 +49,8 @@ describe('Home Test', () => {
         cy.get('.footer').should('be.visible');
     });
 
+    it('Deberia estar oculto el boton Anterior en la primera pagina', () => {
+        cy.visit('/?page=1');
+        cy.get('.pagination__prev').should('not.exist');
+    });
 });
