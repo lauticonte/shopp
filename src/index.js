@@ -1,5 +1,5 @@
 const path = require('path');
-
+const compression = require('compression');
 const morgan = require('morgan');
 const express = require('express');
 const bodyParser = require('body-parser');
@@ -29,7 +29,7 @@ async function startServer(port = process.env.PORT) {
     if (!inTest) {
         app.use(morgan('dev'));
     }
-
+    app.use(compression());
     app.use(bodyParser.urlencoded({ extended: false }));
     app.use(bodyParser.json());
 
