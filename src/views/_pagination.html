@@ -3,7 +3,7 @@
         <ul class="hstack gap-3">
             {% if currentPage > 1 %}   
                 <li class="pagination__prev">
-                    <a href="?page={{ currentPage - 1 }}">< Anterior</a>
+                    <a href="?page={{ currentPage - 1 }}" style="color: rgb(0, 0, 0);">< Anterior</a>
                 </li>
             <li>
             {% endif %}
@@ -13,7 +13,7 @@
             </li>
             {% if currentPage < totalPages %}
                 <li class="pagination__next">
-                    <a href="?page={{ currentPage + 1 }}">Siguiente ></a>
+                    <a href="?page={{ currentPage + 1 }}" style="color: rgb(0, 0, 0);">Siguiente ></a>
                 </li>
             {% endif %}
         </ul>
