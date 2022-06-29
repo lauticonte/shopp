@@ -9,9 +9,21 @@
         {% endfor %}
     </div>
 </div>
+{% if (products|length) === 0 %}
+<div class="cart__empty text-center mt-4">
+    <div class="col">
+        <h1>El carrito esta vacio</h1>
+        <a href="/" class="btn">
+            <i class="fas fa-arrow-left"></i>
+            Ir a la Tienda
+    </div>
+</div>
+{% else %}
 <div class="row">
     <div class="col fs-3 mt-4 text-end">
         Total $ {{ cart.total }}
     </div>
 </div>
+{% endif %}
 {% endblock %}
+
