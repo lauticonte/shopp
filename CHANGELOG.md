@@ -30,4 +30,12 @@ and this project adheres to [Semantic Versioning](https://semver.org/spec/v2.0.0
 -   Mejora code coverage
 -   Deploy a Heroku
 
-[1.1.0]: https://github.com/frlp-utn-ingsoft/shopp/releases/tag/v1.1.0-beta
+[1.1.0]: https://github.com/lauticonte/shopp/releases/tag/v1.1.0-beta
+
+## [1.1.1] - 2022-06-29
+
+### Fixed
+
+-  Arreglo bug carrito vacío
+
+[1.1.1]: https://github.com/lauticonte/shopp/releases/tag/v1.1.1-beta
