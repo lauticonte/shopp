@@ -53,4 +53,10 @@ describe('Cart', () => {
         cy.get('.product:nth-child(2) [data-testid="discount"]')
             .should('have.text', '10 %')
     });
+
+    it('Deberia indicar un mensaje cuando el carrito esta vacio', () => {
+        cy.visit('/cart');
+        cy.get('.cart__empty').should('be.visible');
+    }
+    );
 });
